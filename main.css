@@ -21,6 +21,7 @@ body {
       background-image: url("header-bg.png");
       color: #fff;
       padding: 100px 25px;
+	  margin-bottom: 0px;
       font-family: Montserrat, sans-serif;
   }
   .container-fluid {
@@ -31,7 +32,7 @@ body {
   }
   .logo-small {
       color: #ff6045;
-      font-size: 50px;
+      font-size: 150px;
   }
   .logo {
       color: #ff6045;
