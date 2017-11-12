@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="cards.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet" type="text/css">
@@ -36,20 +37,34 @@
 <div id="app" class="container-fluid bg-grey">
   <br>
   <div class="row">
-    <div class="col-sm-8 form-group">
+    <div class="col-sm-9 form-group">
       <input class="form-control" placeholder="Search by restaurant or meal" type="text" style="display:inline-block; width:80%" required>
 	  <div class="form-group-btn" style="padding-left:10px; display:inline-block">
 		<button type="button" class="btn btn-danger" style="background-color:#ff6045">Search</button>
-	  </div><br>
+	  </div><br><br>
 	  <div class="card">
-	    <img src="img_avatar.png" alt="Avatar" style="width:100%">
+	    <img src="https://img.grouponcdn.com/deal/hfefAup1zQWBE2K8sWURgS27xax/hf-846x508/v1/c700x420.jpg" alt="Avatar" style="width:100%">
+	    <div class="container">
+		  <h4><b>John Doe</b></h4> 
+		  <p>Architect & Engineer</p> 
+	    </div>
+	  </div>
+	  <div class="card">
+	    <img src="https://truffle-assets.imgix.net/23944773-sushi-pizza-p.png" alt="Avatar" style="width:100%">
+	    <div class="container">
+		  <h4><b>John Doe</b></h4> 
+		  <p>Architect & Engineer</p> 
+	    </div>
+	  </div>
+	  <div class="card">
+	    <img src="https://img.grouponcdn.com/deal/hfefAup1zQWBE2K8sWURgS27xax/hf-846x508/v1/c700x420.jpg" alt="Avatar" style="width:100%">
 	    <div class="container">
 		  <h4><b>John Doe</b></h4> 
 		  <p>Architect & Engineer</p> 
 	    </div>
 	  </div>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       	<div id="googleMap" style="height:800px;width:100%;"></div>
 		<script>
 		function myMap() {
