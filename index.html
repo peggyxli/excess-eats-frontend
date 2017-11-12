@@ -40,9 +40,9 @@
   <p>Enter your location below</p> 
   <form>
     <div class="input-group" style="width:800px; margin:auto">
-      <input type="email" class="form-control" style="border-top-right-radius: 4px; border-bottom-right-radius: 4px" size="50" placeholder="Where are you? (Required)" required>
+      <input class="form-control" style="border-top-right-radius: 4px; border-bottom-right-radius: 4px" size="50" placeholder="Where are you? (Required)" required>
       <div class="input-group-btn" style="padding-left:10px">
-        <a href="template.html"><button type="button" class="btn btn-danger" style="background-color:#ff6045">Find food</button></a>
+        <a href="search.html"><button type="button" class="btn btn-danger" style="background-color:#ff6045">Find food</button></a>
       </div>
     </div>
   </form><br>
@@ -71,15 +71,20 @@
 </div>
 
 <!-- Container (Our App Section) -->
-<div id="app" class="container-fluid bg-grey">
+<div id="app" class="container-fluid bg-grey" style="padding-bottom:0px">
   <div class="row">
     <div class="col-sm-8">
       <h2>Our App</h2>
-      <p>Find cheap eats, wherever you are.</p><br>
+      <p style="margin-bottom: 0px">Find cheap eats, wherever you are.</p><br>
+	  <input class="form-control" placeholder="(555) 555-5555" type="text" style="display:inline-block; width:50%" required>
+	  <div class="form-group-btn" style="padding-left:10px; display:inline-block">
+		<button type="button" class="btn btn-danger" style="background-color:#ff6045">Text me the app</button>
+	  </div>
+	  <br><br>
 	  <img src="Apple_AppStore.svg"/><img src="Google_PlayStore.svg" height="40"/>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-signal logo"></span>
+      <img src="app-screenshot.png" height="325">
     </div>
   </div>
 </div>

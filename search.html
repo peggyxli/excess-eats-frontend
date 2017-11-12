@@ -22,77 +22,45 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage"><img src="logo.png"/></a>
+      <a class="navbar-brand" href="index.html"><img src="logo.png"/></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#process">HOW IT WORKS</a></li>
-        <li><a href="#app">OUR APP</a></li>
-        <li><a href="#about">ABOUT US</a></li>
 		<li><a href="sign-in.html">SIGN IN</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="jumbotron text-center">
-  <br><h1><strong>Find cheap eats near you!</strong></h1><br>
-  <p>Enter your location below</p> 
-  <form>
-    <div class="input-group" style="width:800px; margin:auto">
-      <input type="email" class="form-control" style="border-top-right-radius: 4px; border-bottom-right-radius: 4px" size="50" placeholder="Where are you? (Required)" required>
-      <div class="input-group-btn" style="padding-left:10px">
-        <a href="template.html"><button type="button" class="btn btn-danger" style="background-color:#ff6045">Find food</button></a>
-      </div>
-    </div>
-  </form><br>
-</div>
-
-<!-- Container (Process Section) -->
-<div id="process" class="container-fluid text-center">
-  <h2>HOW IT WORKS</h2><br>
-  <div class="row">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-search logo-small"></span>
-      <br><br><h4><strong>The Where</strong></h4>
-      <p>Search for restaurants with excess food near you</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-check logo-small"></span>
-      <br><br><h4><strong>The What</strong></h4>
-      <p>Select what you want to eat.  Submit your order and reserve a time-slot for pickup.</p>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-time logo-small"></span>
-      <br><br><h4><strong>The Pickup</strong></h4>
-      <p>Pop into the restaurant and pickup your food!</p>
-    </div>
-  </div>
-</div>
-
 <!-- Container (Our App Section) -->
 <div id="app" class="container-fluid bg-grey">
+  <br>
   <div class="row">
-    <div class="col-sm-8">
-      <h2>Our App</h2>
-      <p>Find cheap eats, wherever you are.</p><br>
-	  <img src="Apple_AppStore.svg"/><img src="Google_PlayStore.svg" height="40"/>
+    <div class="col-sm-8 form-group">
+      <input class="form-control" placeholder="Search by restaurant or meal" type="text" style="display:inline-block; width:80%" required>
+	  <div class="form-group-btn" style="padding-left:10px; display:inline-block">
+		<button type="button" class="btn btn-danger" style="background-color:#ff6045">Search</button>
+	  </div><br>
+	  <div class="card">
+	    <img src="img_avatar.png" alt="Avatar" style="width:100%">
+	    <div class="container">
+		  <h4><b>John Doe</b></h4> 
+		  <p>Architect & Engineer</p> 
+	    </div>
+	  </div>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-signal logo"></span>
-    </div>
-  </div>
-</div>
-
-<!-- Container (About Section) -->
-<div id="about" class="container-fluid">
-  <div class="row">
-    <div class="col-sm-4">
-      <img src="logo-circle.png"/>
-    </div>
-    <div class="col-sm-8">
-      <br><h2>About Us</h2><br>
-      <p>ExcessEats helps you and order surplus foods from wherever you are. How it works: you type in your address, we tell you the restaurants that currently have excess foods for discounted prices near you. Want to be more specific? Search by cuisine, restaurant name, or menu item. We'll filter your results accordingly. When you find what you're looking for, you can place an order online and reserve a time slot for pick up. When your time arrives, just pop into the restaurant and pick up your food!</p>
+      	<div id="googleMap" style="height:800px;width:100%;"></div>
+		<script>
+		function myMap() {
+		var myCenter = new google.maps.LatLng(40.702549, -73.993301);
+		var mapProp = {center:myCenter, zoom:17, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+		var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		var marker = new google.maps.Marker({position:myCenter});
+		marker.setMap(map);
+		}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlN5LZyXBfqQucdTtGhxksCr4gMB4jNeI&callback=myMap"></script>
     </div>
   </div>
 </div>

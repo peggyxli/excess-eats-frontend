@@ -24,6 +24,12 @@ body {
 	  margin-bottom: 0px;
       font-family: Montserrat, sans-serif;
   }
+  .form-control {
+	  height: 40px;
+  }
+  .btn {
+	  height: 40px;
+  }
   .container-fluid {
       padding: 60px 50px;
   }
