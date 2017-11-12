@@ -43,8 +43,10 @@
 		<button type="button" class="btn btn-danger" style="background-color:#ff6045">Search</button>
 	  </div><br><br>
 	  <div class="input-group-btn" style="display:inline-block">
+		<button type="button" id="sort-by-distance" class="btn btn-danger" style="background-color:#ff6045; margin-right:10px">Sort by distance</button>
 		<button type="button" id="sort-by-rating" class="btn btn-danger" style="background-color:#ff6045; margin-right:10px">Sort by rating</button>
-		<button type="button" id="sort-by-expire" class="btn btn-danger" style="background-color:#ff6045">Sort by expiration</button>
+		<button type="button" id="sort-by-expire" class="btn btn-danger" style="background-color:#ff6045; margin-right:10px">Sort by expiration</button>
+		<button type="button" id="sort-by-price" class="btn btn-danger" style="background-color:#ff6045">Sort by price</button>
 	  </div><br><br>
 	  <div id="my-cards"></div>
 	  </script>
@@ -53,11 +55,18 @@
       	<div id="googleMap" style="height:800px; width:100%"></div>
 		<script>
 		function myMap() {
-		var myCenter = new google.maps.LatLng(40.702549, -73.993301);
-		var mapProp = {center:myCenter, zoom:17, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+		var myCenter = new google.maps.LatLng(40.6997577, -73.97735419999998);
+		var myLatLng1 = new google.maps.LatLng(40.7426354, -73.97472920000001);
+		var myLatLng2 = new google.maps.LatLng(40.77925499999999, -73.985884);
+		var myLatLng3 = new google.maps.LatLng(40.7526493, -73.98703130000001);
+		var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
 		var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-		var marker = new google.maps.Marker({position:myCenter});
-		marker.setMap(map);
+		var marker1 = new google.maps.Marker({position:myLatLng1});
+		marker1.setMap(map);
+		var marker2 = new google.maps.Marker({position:myLatLng2});
+		marker2.setMap(map);
+		var marker3 = new google.maps.Marker({position:myLatLng3});
+		marker3.setMap(map);
 		}
 		</script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlN5LZyXBfqQucdTtGhxksCr4gMB4jNeI&callback=myMap"></script>
