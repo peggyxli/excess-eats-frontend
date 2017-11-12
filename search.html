@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="cards.js"></script>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
@@ -41,26 +42,11 @@
 	  <div class="form-group-btn" style="padding-left:10px; display:inline-block">
 		<button type="button" class="btn btn-danger" style="background-color:#ff6045">Search</button>
 	  </div><br><br>
+	  <div class="input-group-btn" style="display:inline-block">
+		<button type="button" id="sort-by-rating" class="btn btn-danger" style="background-color:#ff6045; margin-right:10px">Sort by rating</button>
+		<button type="button" id="sort-by-expire" class="btn btn-danger" style="background-color:#ff6045">Sort by expiration</button>
+	  </div><br><br>
 	  <div id="my-cards"></div>
-	  <script type="text/javascript">
-		$.get("http://excesseats-env.us-east-1.elasticbeanstalk.com/eats/all", function(data){
-			for (var i = 0; i < data.length; i++) {
-				var myCards, card, myContainer, myPrice;
-				myCards = $('#my-cards');
-			
-				card = $('<div class="card"></div>');
-				cardImage = $('<img>');
-				cardImage.attr("src", data[i].imgUrl);
-				cardImage.attr("style", "width:100%");
-				myContainer = $('<div class="container"></div>');
-			
-				myCards.append(card);
-				card.append(cardImage);
-				card.append(myContainer);
-				myContainer.append('<h4><b>' + data[i].description + '</b></h4>');
-				myContainer.append('<p>' + data[i].producer + '<br>' + "SALE $" + data[i].discountedPrice + " Reg. $" + data[i].price + '</p>');
-			}
-		});
 	  </script>
     </div>
     <div class="col-sm-3">
